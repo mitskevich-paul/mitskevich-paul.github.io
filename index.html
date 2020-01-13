@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./build/css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="top">
+        <div class="container">
+            <header>
+                <img class="header-img-logo" src="./build/img/logo.png" alt="logo">
+                <div class="header-info">
+                    <span class="header-first-span">кондор строй</span>
+                    <span class="header-second-span">Более 7 лет строим дома для комфортной жизни</span>
+                </div>
+                <div class="header-location">
+                    <svg viewBox="0 0 12 16">
+                        <image class="placeholder-filled-point" xlink:href="data:img/png;base64,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"/>
+                      </svg>
+                    <span class="header-location-span">город Солнечногорск, ул. Красная 158, офис 416</span>
+                </div>
+                <div class="header-number">
+                    <span class="header-number-first-span">Работаем без выходных по Москве и области</span>
+                    <span class="header-number-second-span">+7 (926) 579-35--32</span>
+                </div>
+                <img class="telegram" src="./build/img/telegram.svg">
+                <img class="whatsapp" src="./build/img/whatsapp.svg">
+            </header>
+            <div class="wrapper-main">
+                <h1>построим долговечный<br>и комфортный загородный дом</h1>
+                <p class="wrapper-main-up-p">из камня для Вас и Вашей семьи любой площади и сложности</p>
+                <span class="wrapper-main-info-span">Кликайте на кружки, чтобы увидеть информацию</span>
+                <button class="top-main-button">Рассчитать стоимость дома</button>
+                <p class="wrapper-main-down-p">Ответьте на 5 вопросов и узнайте какой тип дома подойдет именно Вам</p>
+                <span class="wrapper-main-scroll-span">Скролльте вниз</span>
+                <button class="wrapper-main-rund-first">+</button>
+                <button class="wrapper-main-rund-second">+</button>
+                <button class="wrapper-main-rund-third">+</button>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper-about-materials">
+        <div class="container">
+            <p class="wrapper-materials-expirianse">у нас достаточно знаний и опыта для того,</p>
+            <h2 class="wrapper-materials-material">чтобы построить ваш дом почти из любого материала</h2>
+            <p class="wrapper-materials-recomendation">но если для Вас на первом месте стоит комфорт и долговечность, то мы рекомендуем:</p>
+            <div class="materials-logo-flex">
+                <div class="wrapper-materials-silicate">
+                    <div class="silicate_content">
+                        <p class="silicate-p-about">Газосиликатный блок</p>
+                        <div class="silicate_element">
+                            <img class="silicate-logo-slav" src="./build/img/slavyanski-kirpich.png">
+                            <img class="silicate-logo-murom" src="./build/img/murom-blok.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-materials-brick">
+                    <div class="brick_content">
+                        <p class="brick-p-about">Кирпич щелевой и полнотелый</p>
+                        <div class="brick_element">
+                            <img class="brick-logo-evro"src="./build/img/evroton.png">
+                            <img class="brick-logo-lsr" src="./build/img/lsr.png">
+                            <img class="brick-logo-stone" src="./build/img/brick-stone.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-materials-ceramic">
+                    <div class="ceranic_content">
+                        <p class="ceramic-p-about">Керамический блок</p>
+                        <div class="ceramic_element">
+                            <img class="ceramic-logo-akz" src="./build/img/akz.png">
+                            <img class="ceramic-logo-slav" src="./build/img/slavyanski-kirpich.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <p class="wrapper-materials-whythem">почему они, <span class="wrapper-materials-whythem-textures">а не каркасник из дерева,</span> например?</p> -->
+            <p class="wrapper-materials-whythem">почему они, а не каркасник из дерева, например?</p>
+            <div class="materials-discription-flex">
+            <div class="dis-flex-block-start">
+                <img src="./build/img/first-dec-material.png" alt="materials">
+                <p class="materials-descriptions-long-p">долговечно</p>
+                <span class="materials-descriptions-long-s">средний срок службы 50-100 лет</span>
+            </div>
+            <div class="dis-flex-block-middle">
+                <img src="./build/img/sec-dec-material.png" alt="materials">
+                <p class="materials-descriptions-effective-p">энергоэффективно</p>
+                <span class="materials-descriptions-effective-s">самые малые теплопотери</span>
+            </div>
+            <div class="dis-flex-block-end">
+            <img src="./build/img/thrd-dec-material.png" alt="materials">
+            <p class="materials-descriptions-safe-p">пожаробезопасно</p>
+            <span class="materials-descriptions-safe-s">минимальный риск возгорания</span>
+            </div>
+        </div>
+            <div class="materials-table">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Газосиликат</th>
+                        <th>Керамический блок</th>
+                        <th>Дерево</th>
+                        <th>Керамзитобетон</th>
+                        <th>Двойной щелевой</th>
+                        <th>Кирпич</th>
+                    </tr>
+                    <tr>
+                        <td>Теплопроводность, Вт/(м*К)</td>
+                        <td>0,12</td>
+                        <td>0,16</td>
+                        <td>0,18</td>
+                        <td>0,3</td>
+                        <td>0,35</td>
+                        <td>0,56</td>
+                    </tr>
+                    <tr>
+                        <td>Прочность, кг/см&#178; (м)</td>
+                        <td>25</td>
+                        <td>100</td>
+                        <td>50</td>
+                        <td>125</td>
+                        <td>150</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>Огнестойкость, t горения</td>
+                        <td>1200</td>
+                        <td>1500</td>
+                        <td>300</td>
+                        <td>1100</td>
+                        <td>1500</td>
+                        <td>1500</td>
+                    </tr>
+                    <tr>
+                        <td>Коэффициент усадки, %</td>
+                        <td>2</td>
+                        <td>0,01</td>
+                        <td>10</td>
+                        <td>0,03</td>
+                        <td>0,01</td>
+                        <td>0,01</td>
+                    </tr>
+                    <tr>
+                        <td>Стоимость, р/м&#179;</td>
+                        <td>3000</td>
+                        <td>5200</td>
+                        <td>26000</td>
+                        <td>2900</td>
+                        <td>2800</td>
+                        <td>4300</td>
+                    </tr>
+                </table>
+            </div>
+            <button class="wrapper-about-materials-button">
+                <span>смотреть видеообзор от нашего партнера</span>
+            </button>
+            <span class="wrapper-about-materials-scroll-span">о материалах, которые мы используем</span>
+        </div>
+    </section>
+    <section class="wrapper-ready-catalog">
+        <div class="container">
+            <p class="wrapper-ready-catalog-head">Каталог готовых, а также уже реализованных проектов</p>
+            <h3 class="wrapper-ready-catalog-header">выберите готовый проект дома <span class="catalog-header-or">или<br></span><a href="#" class="catalog-header-gradient">закажите индивидуальный проект</a></h3>
+            <ul class="wrapper-ready-catalog-selection">
+                <li class="catalog-selection-chip"><button>Сначала дешевые</button></li>
+                <li class="catalog-selection-expensive"><button>Сначала дорогие</button></li>
+                <li class="catalog-selection-reset"><button>Сбросить фильтр</button></li>
+            </ul>
+            <div class="wrapper-catalog-list-grid">
+                <div class="catalog-grid-element-first">
+                    <img src="./build/img/ballero.jpg" alt="house ballero">
+                    <div class="catalog-grid-element-first-flex">
+                    <div class="grid-sub-element-first-parameter-left">
+                        <div class="first-parameter_content-row-first">
+                            <h5 class="grid-first-parameter-left-name">Болеро</h5>
+                            <p class="grid-first-parameter-left-discription">дом из камня</p>
+                        </div>
+                        <div class="first-parameter_content-row-second">
+                            <div class="first-parameter_content-pre-row-first">
+                                <p class="grid-first-parameter-left-space">150 м&#178; площадь объекта</p>
+                            </div>
+                        </div>
+                        <div class="first-parameter_content-row-third">
+                            <p class="grid-first-parameter-left-bath">2 санузла</p>
+                            <p class="grid-first-parameter-left-bed">3 спальни</p>
+                        </div>
+                    </div>
+                    <div class="grid-sub-element-first-parameter-right">
+                        <div class="parameter-right-row-first">
+                        <ul>
+                            <li>Материал для стен:<span class="sub-element-first-li-span-first">Кирпич</span c></li>
+                            <li>Срок строительства:<span class="sub-element-first-li-span-second">5 мес.</span></li>
+                        </ul>
+                        </div>
+                        <div class="parameter-right-row-second">
+                            <p class="grid-sub-element-first-parameter-right-price">от 6. 400. 360 &#8381;</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="grid-sub-element-first-buttons">
+                        <button>понравился, хочу похожий</button>
+                        <button>запросить проект и смету</button>
+                    </div>
+                </div>
+                <div class="catalog-grid-element-second">
+                    <img src="./build/img/queenanna.jpg" alt="house queen anna">
+                    <div class="grid-sub-element-second">
+                        <div class="element-second-row-first">
+                            <h5 class="grid-second-parameter-name">Королева Анна</h5>
+                            <p class="grid-second-parameter-discription">дом из камня</p>
+                        </div>
+                        <div class="element-second-row-second">
+                            <p class="grid-second-parameter-space">110 м&#178;</p>
+                            <p class="grid-second-parameter-bed">2 спальни</p>
+                        </div>
+                        <div class="element-second-row-third">
+                            <ul>
+                                <li>Материал для стен:<span class="sub-element-second-li-span-first">Кирпич</span></li>
+                                <li>Срок строительства:<span class="sub-element-second-li-span-second">3 мес.</span></li>
+                            </ul>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="grid-sub-element-second-price">
+                        <p>от 3. 430. 880 &#8381;</p>
+                        <button>запросить этот проект с точной ценой</button>
+                    </div>
+                </div>
+                <div class="catalog-grid-element-third">
+                    <img src="./build/img/kamelot.jpg" alt="hause kamelot">
+                    <div class="grid-sub-element-third">
+                        <div class="element-second-row-first">
+                            <h5 class="grid-third-parameter-name">Камелот</h5>
+                            <p class="grid-third-parameter-discription">дом из камня</p>
+                        </div>
+                        <div class="element-second-row-second">
+                            <p class="grid-third-parameter-space">150 м&#178;</p>
+                            <p class="grid-third-parameter-bed">3 спальни</p>
+                        </div>
+                        <div class="element-second-row-third">
+                            <ul>
+                                <li>Материал для стен:<span class="sub-element-third-li-span-first">Кирпич</span></li>
+                                <li>Срок строительства:<span class="sub-element-third-li-span-second">4 мес.</span></li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-sub-element-third-price">
+                            <p>от 5. 400. 360 &#8381;</p>
+                            <button>запросить этот проект с точной ценой</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-grid-element-fourth">
+                    <img src="./build/img/tirol.jpg" alt="hause tirol">
+                    <div class="grid-sub-element-fourth">
+                        <div class="element-second-row-first">
+                            <h5 class="grid-fourth-parameter-name">Тироль</h5>
+                            <p class="grid-fourth-parameter-discription">каркасный дом</p>
+                        </div>
+                        <div class="element-second-row-second">
+                            <p class="grid-fourth-parameter-space">180 м&#178;</p>
+                            <p class="grid-fourth-parameter-bed">4 спальни</p>
+                        </div>
+                        <div class="element-second-row-third">
+                            <ul>
+                                <li>Материал для стен:<span class="sub-element-fourth-li-span-first">Дерево</span></li>
+                                <li>Срок строительства:<span class="sub-element-fourth-li-span-second">5 мес.</span></li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-sub-element-fourth-price">
+                            <p>от 6. 500. 120 &#8381;</p>
+                            <button>запросить этот проект с точной ценой</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-grid-element-fifth">
+                    <img src="./build/img/skand.jpg" alt="hause skandinaviya">
+                    <div class="grid-sub-element-fifth">
+                        <div class="element-second-row-first">
+                            <h5 class="grid-fifth-parameter-name">Скандинавия</h5>
+                            <p class="grid-fifth-parameter-discription">каркасный дом</p>
+                        </div>
+                        <div class="element-second-row-second">
+                            <p class="grid-fifth-parameter-space">120 м&#178;</p>
+                            <p class="grid-fifth-parameter-bed">4 спальни</p>
+                        </div>
+                        <div class="element-second-row-third">
+                            <ul>
+                                <li>Материал для стен:<span class="sub-element-fourth-li-span-first">Дерево</span></li>
+                                <li>Срок строительства:<span class="sub-element-fourth-li-span-first">3 мес.</span></li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="grid-sub-element-fifth-price">
+                            <p>от 4. 120. 960 &#8381;</p>
+                            <button>запросить этот проект с точной ценой</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="catalog-see-more">смотреть еще  &#8226;&#8226;&#8226;</button>
+            <span class="wrapper-ready-catalog-scroll-span">уже готовые, а также реализованные проекты</span>
+        </div>
+    </section>
+    <section class="wrapper-consultation">
+        <div class="container">
+            <h2 class="consultation_header">Тяжело выбрать или хотите индивидуальный проект дома?</h2>
+            <div class="consultation_coloum-left">
+                <p class="consultation_test-description">Ответьте на 5 вопросов и наш дизайнер-консультант подберёт для Вас дом, который идеально подходит под Ваши параметры, и получите:</p>
+                <div class="exclusive_project-container">
+                    <p class="exclusive_project-discription">эскизный проект будущего дома в подарок</p>
+                    <button class="exclusive_project-button">Смотреть пример</button>
+                </div>
+                <button class="consultation_button-house-dream">подобрать дом своей мечты</button>
+            </div>
+            <div class="consultation_coloum-right">
+                <div class="consultation_block">
+                    <h5 class="consultation_block-header">Мы не используем псевдо калькуляторы на сайте.</h5>
+                    <p class="consultation_block-answer">Все вопросы, на которые Вы ответите, помогут нам подобрать правильные материалы и технологию для строительства, учитывая Ваши пожелания и бюджет.</p>
+                    <img src="./build/img/director.png" alt="Kondratenko Vladivir">
+                    <div class="consultation_coloum-right-director">
+                    <p class="consultation_coloum-right-director-name">Кондратенко Владимир</p>
+                    <span class="consultation_coloum-right-director-place">генеральный директор</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper-for-clients">
+        <div class="container">
+            <p class="for-clients_head">Никаких скрытых платежей и сорванных сроков</p>
+            <h2 class="for-clients_header">работаем с каждым нашим клиентом честно и прозрачно</h2>
+            <span class="for-clients_press-to-image">нажмите на документ, чтобы его посмотреть</span>
+            <div class="for-clients_documents-grid">
+                <img class="for-clients_documents-grid_contract-img" src="./build/img/dogovor-leaf.png" alt="contract-icon">
+                <h5 class="for-clients_documents-grid_contract-header">договор</h5>
+                <p class="for-clients_documents-grid_contract-discription">Заключение договора четко фиксирует финансовые и временные показатели выполнения работ, прав и обязанностей сторон.</p>
+                <img class="for-clients_documents-estimate-img" src="./build/img/smeta-leaf.png" alt="contract-icon">
+                <h5 class="for-clients_documents-estimate-header">смета</h5>
+                <p class="for-clients_documents-estimate-discription">Профессиональная команда сметчиков готовит детальную смету с учетом всех накладных расходов. После этого смета на протяжении строительства не меняется.</p>
+                <img class="for-clients_documents-payment-img" src="./build/img/grafik-leaf.png" alt="contract-icon">
+                <h5 class="for-clients_documents-payment-header">график платежей</h5>
+                <p class="for-clients_documents-payment-discription">На этом этапе подписания договора составляется план-график производства и финансирования работ. Данный документ является основным при проведении и контроле работ на объекте.</p>
+            </div>
+            <div class="for-clients_video-foto-report">
+                <img src="./build/img/camera-leaf.png" alt="camera icon">
+                <p class="for-clients-report">Предоставляем фото и видео отчеты по каждому этапу строительства, Вы можете даже не появляться на объекте до его конечной сдачи Вам.</p>
+            </div>
+            <span class="wrapper-for-clients-scroll-span">документы, которые дают гарантии</span>
+        </div>
+    </section>
+    <section class="wrapper-constr-stages-slider">
+        <div class="container"> 
+            <p class="const-stages-head">Точно соблюдаем технологию на каждом из этапов строительства</p>
+            <h2 class="const-stages-header">строим дома, в которых будут жить ваши дети и дети их детей</h2>
+            <img class="slider-stamp" src="./build/img/stamp.png" alt="stamp-icon">
+            <div class="all">
+                <input checked type="radio" name="respond" id="desktop">
+                    <article id="slider">
+                            <input checked type="radio" name="slider" id="switch1">
+                            <input type="radio" name="slider" id="switch2">
+                            <input type="radio" name="slider" id="switch3">
+                            <input type="radio" name="slider" id="switch4">
+                            <input type="radio" name="slider" id="switch5">
+                            <input type="radio" name="slider" id="switch6">
+                        <div id="slides">
+                            <div id="overflow">
+                                <div class="image">
+                                    <article class="first">
+                                        <div class="slide-grid">
+                                            <div class="background">
+                                                <!-- <span class="slide-number">/01</span> -->
+                                            </div>
+                                            <img src="./build/img/slide-1.png" alt="">
+                                            <p class="slider-stage">I этап &#8212;</p>
+                                            <h4>строительная мобилизация<br>(при необходимости)</h4>
+                                            <p class="slide-1_discr1">Устройства вагончика или временного жилья для строителей</p>
+                                            <p class="slide-1_discr2">Обустройства туалета и душа</p>
+                                            <p class="slide-1_discr3">Возведение временного склада</p>
+                                            <p class="slide-1_discr4">Установка временного забора</p>
+                                        </div>
+                                    </article>
+                                    <article class="second">
+                                        <div class="slide-grid">
+                                            <div class="background">
+                                                <!-- <span class="slide-number">/02</span> -->
+                                            </div>
+                                            <img src="./build/img/slide-2.png" alt="">
+                                            <p class="slider-stage">II этап &#8212;</p>
+                                            <h4>фундамент</h4>
+                                            <p class="slide-1_discr1">Разработка котлована, траншей или бурение свай механизированным или ручным способом</p>
+                                            <p class="slide-1_discr2">Песчано-щебеночная подготовка с проливкой и трамбовкой</p>
+                                            <p class="slide-1_discr3">Вязка арматурно-пространственного каркаса, с последующей заливкой бетонной смеси ручным или механизированным способом</p>
+                                        </div>
+                                    </article>
+                                    <article class="third">
+                                        <div class="slide-grid">
+                                            <div class="background">
+                                                <!-- <span class="slide-number">/03</span> -->
+                                            </div>
+                                            <img src="./build/img/slide-3.png" alt="">
+                                            <p class="slider-stage">III этап &#8212;</p>
+                                            <h4>возведение стен</h4>
+                                            <p class="slide-1_discr1">Укладка первых рядов кирпича:<br>- разбивка осей стен;<br>- устройство гидроизоляции первого ряда</p>
+                                            <p class="slide-1_discr2">Устройство многослойных стен:<br>- кладка облицовочного кирпича;<br>- монтаж утеплителя</p>
+                                        </div>
+                                    </article>
+                                    <article class="fourth">
+                                        <div class="slide-grid">
+                                            <div class="background">
+                                                <!-- <span class="slide-number">/04</span> -->
+                                            </div>
+                                            <img src="./build/img/slide-4.png" alt="">
+                                            <p class="slider-stage">IV этап &#8212;</p>
+                                            <h4>монтаж или изготовление перекрытий фундамента, 1-го и 2-го этажей</h4>
+                                            <p class="slide-1_discr1">Устройство монолитного перекрытия</p>
+                                            <p class="slide-1_discr2">Изготовление деревянных перекрытий по лагам</p>
+                                            <p class="slide-1_discr3">Монтаж перекрытия железобетонными плитами</p>
+                                            <p class="slide-1_discr4">Изготовление монолитно-бетонных межэтажных лестничных маршей</p>
+                                        </div>
+                                    </article>
+                                    <article class="fifth">
+                                        <div class="slide-grid">
+                                            <div class="background">
+                                                <!-- <span class="slide-number">/05</span> -->
+                                            </div>
+                                            <img src="./build/img/slide-5.png" alt="">
+                                            <p class="slider-stage">V этап &#8212;</p>
+                                            <h4>кровельные работы</h4>
+                                            <p class="slide-1_discr1">Монтаж стропильной системы</p>
+                                            <p class="slide-1_discr2">Утепление и устройство пароводо изоляционных мембран</p>
+                                            <p class="slide-1_discr3">Монтаж обрещетки</p>
+                                            <p class="slide-1_discr4">Устройство молниезащиты</p>
+                                            <!-- <p class="slide-1_discr1">Подшивка карнизов кровли:<br>- пластиковые софиты;<br>- металлические софиты;<br>- дерево</p>
+                                            <p class="slide-1_discr2">Покрытие ровлей разного типа:<br>- металлочерепица;<br>- натуральная черепица;<br>- мягкая кровля;<br>- монтаж медного покрытия</p>
+                                            <p class="slide-1_discr3">Устройство водосточной системы</p> -->
+                                        </div>
+                                    </article>
+                                    <article class="sixth">
+                                        <div class="slide-grid">
+                                            <div class="background">
+                                                <!-- <span class="slide-number">/06</span> -->
+                                            </div>
+                                            <img src="./build/img/slide-6.png" alt="">
+                                            <p class="slider-stage">VI этап &#8212;</p>
+                                            <h4>дополнительные работы</h4>
+                                            <p class="slide-1_discr1">Ввод и прокладка инженерной системы</p>
+                                            <p class="slide-1_discr2">Внешняя и внутренняя отделка</p>
+                                            <p class="slide-1_discr3">Изготовление входных групп</p>
+                                            <p class="slide-1_discr4">Отмостки и ливневые канализации</p>
+                                            <p class="slide-1_discr5">Изготовление заборов</p>
+                                            <p class="slide-1_discr6">Благоустройство территории</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controls">
+                            <label for="switch1"><span>&#62;</span></label>
+                            <label for="switch2"><span>&#62;</span></label>
+                            <label for="switch3"><span>&#62;</span></label>
+                            <label for="switch4"><span>&#62;</span></label>
+                            <label for="switch5"><span>&#62;</span></label>
+                            <label for="switch6"><span>&#62;</span></label>
+                        </div>
+                        <div id="active">
+                            <label class="pre-image-slider" for="switch1"><img src="./build/img/slide-1.png" alt="slider-icon"></label>
+                            <label class="pre-image-slider" for="switch2"><img src="./build/img/slide-2.png" alt="slider-icon"></label>
+                            <label class="pre-image-slider" for="switch3"><img src="./build/img/slide-3.png" alt="slider-icon"></label>
+                            <label class="pre-image-slider" for="switch4"><img src="./build/img/slide-4.png" alt="slider-icon"></label>
+                            <label class="pre-image-slider" for="switch5"><img src="./build/img/slide-5.png" alt="slider-icon"></label>
+                            <label class="pre-image-slider" for="switch6"><img src="./build/img/slide-6.png" alt="slider-icon"></label>
+                        </div>
+                    </article>
+            </div>
+            <button class="constr-stages-slider-button">обсудить проект вашего дома</button>
+            <span class="constr-stages-slider-scroll-span">этапы нашей работы при строительстве объекта</span>
+        </div>
+    </section>
+    <section class="wrapper-work-scheme">
+        <div class="container">
+            <h2 class="wrapper-work-scheme-header">по какой схеме мы работаем с каждым клиентом</h2>
+            <p class="wrapper-work-scheme-discr">График оплаты работ согласовывается и подстраивается под каждого клиента</p>
+            <div class="slider">
+                <div class="slider__wrapper">
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/resume-icon.png">
+                            <h4><span>01 - </span>Оставляете заяку</h4>
+                            <p>Вы оставляете заявку на сайте - это не означает, что Вы должны заказать именно у нас - заявка ни к чему Вас не обязывает.</p>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/contact-icon.png">
+                            <h4><span>02 - </span>Оставляете заяку</h4>
+                            <p>Мы перезваниваем Вам в течении 30 минут и отвечаем на оставшиеся вопросы.</p>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/conversation-icon.png">
+                            <h4><span>03 - </span>Обратный звонок</h4>
+                            <p>Назначаем встречу у нас в офисе для обсуждения деталей, составления проекта или анализа существующего.</p>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/chek-list.png">
+                            <h4><span>04 - </span>Рассчитываем смету</h4>
+                            <p>Рассчитываем примерную смету и выезжаем на объект для ее уточнения.</p>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/handshake-icon.png">
+                            <h4><span>05 - </span>Подписываем бумаги</h4>
+                            <p>Называем точную стоимость строительства. Если Вас все устраивает:<br>- заключаем договор;<br>- подписываем смету;<br>- подписываем график выполнени и оплаты работ.</p>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/crane-icon.png">
+                            <h4><span>06 - </span>Этап I. Фундамент</h4>
+                            <p>Вносите предоплату от стоимости первого этапа "фундамент":<br>-70% на материалы и механизмы;<br>-50% на работу.<br>После мы приступаем к строительству в течении 5 дней.</p>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/ruler-icon.png">
+                            <h4><span>07 - </span>Изготовление фундамента</h4>
+                            <p>Выполняем все земельные работы и изготавливаем фундамент. После сдачи фундамента вносятся оставшиеся части оплаты:<br>-30% на материалы и механизмы;<br>-50% на работу.</p>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/brickfenst-icon.png">
+                            <h4><span>08 - </span>Этап II. Стены</h4>
+                            <p>Осуществляем кладку стен и несущих конструкций с предоплатой:<br>-70% на материалы и механизмы;<br>-50% на работу.<br>По окончанию работ вносите оставшуюся стоимость по данному этапу.</p>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/woodhouse-icon.png">
+                            <h4><span>09 - </span>Этап III. Крыша</h4>
+                            <p>Далее монтируем кровлю Вашего дома. Точно так же, как и на предыдущих этапах вносится предоплата:<br>-70% на материалы и механизмы;<br>-50% на работу.</p>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/fense-icon.png">
+                            <h4><span>10 - </span>Сдача объекта</h4>
+                            <p>Сдаем Вам объект не позднее срока установленного в договоре, после подписываем акты сдачи работ.</p>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="element-container">
+                            <img src="./build/img/lupa-icon.png">
+                            <h4><span>11 - </span>Оконочание работ</h4>
+                            <p>При необходимости прокладываем все инженерные сети и выполняем дополнительные работы. Вы счастливый обладатель уютного и надежного загородного дома!</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="slider__control slider__control_left slider__control_show" role="button"><span>&#60;</span></a>
+                <a class="slider__control slider__control_right slider__control_show" role="button"><span>&#62;</span></a>
+              </div>
+            </div>
+    </section>
+    <section class="wrapper-construction-trust">
+        <div class="container">
+            <h2 class="construction-trust_header">почему строительство дома нужно доверить именно нам</h2>
+            <p class="construction-trust_prompt">Наведите курсором на цифры, чтобы увидеть подробную информацию</p>
+            <img class="construction-trust-number1" src="./build/img/number-1.png" alt="information number">
+            <img class="construction-trust-number2" src="./build/img/number-2.png" alt="information number">
+            <img class="construction-trust-number3" src="./build/img/number-3.png" alt="information number">
+            <img class="construction-trust-number4" src="./build/img/number-4.png" alt="information number">
+            <div class="construction-trust-item-container-first">
+                <span>01</span>
+                <h4>строим дома только из проверенных материалов</h4>
+                <p>Мы можем построить Ваш дом почти из любых материалов, но советуем керамический, газосиликатный блоки и кирпич.</p>
+                <button><span>С какими материалами мы работаем</span></button>
+                <ul>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                </ul>
+            </div>
+            <div class="construction-trust-item-container-second">
+                <span>02</span>
+                <h4>выполняем весь цикл работ по строительству</h4>
+                <p>Оказываем полный перечень услуг от разработки или подбора готового дома, до его строительства и проведения отделочных работ.</p>
+                <button><span>Смотреть весь список работ</span></button>
+                <ul>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                </ul>
+            </div>
+            <div class="construction-trust-item-container-third">
+                <span>03</span>
+                <h4>полностью соблюдаем технологический процесс</h4>
+                <p>Знаем и соблюдаем технологические процессы каждого из этапов строительства, от возведения фундамента, до кровли в соответствии с нормами ГОСТ и СНИП.</p>
+                <ul>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                </ul>
+            </div>
+            <div class="construction-trust-item-container-fourth">
+                <span>04</span>
+                <h4>имеем в штате проверенные бригады с опытом работы от 15 лет</h4>
+                <p>За 10 лет работы мы собрали по-настоящему профессиональную команду строителей и проектировщиков, в нашем штате более 30 сотрудников.</p>
+                <button><span>Смотреть состав бригады</span></button>
+                <ul>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                    <li>&#8226;</li>
+                </ul>
+            </div>
+            <span class="constr-trust_scroll-span">преимущества сотрудничества с kondor stroy</span>
+        </div>
+    </section>
+    <section class="wrapper-contact-us">
+        <div class="contact-us-mup">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2219.8539754394264!2d36.96659316573464!3d56.19420128210402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b508c34184ef8d%3A0x57a9b10d495ee9a2!2z0YPQuy4g0JrRgNCw0YHQvdCw0Y8sIDE1OCwg0KHQvtC70L3QtdGH0L3QvtCz0L7RgNGB0LosINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sINCg0L7RgdGB0LjRjywgMTQxNTA1!5e0!3m2!1sru!2sby!4v1578590715896!5m2!1sru!2sby" allowfullscreen="false"></iframe>
+        </div>
+            <div class="contact-us-requisites">
+                <h2>доверьте строительство дома профессионалам</h2>
+                <p>Звоните или пишите, ответим на все Ваши вопросы и поможем определить какой дом нужен именно Вам.</p>
+                <span>+7 (926) 579-35-32</span>
+                <img src="./build/img/telegram.svg">
+                <img src="./build/img/whatsapp.svg">
+                <p>Или введите свой номер и мы перезвоним в течении 10 минут.</p>
+                <form>
+                    <input type="text" placeholder="+7 (815) 817-22-41">
+                    <button type="submit"></button>
+                </form>
+            </div>
+    </section>
+    <footer>
+        <section>
+            <div class="container">
+                <div class="footer_container-part-left">
+                    <div class="footer-logo">
+                        <img class="footer-img-logo" src="./build/img/logo.png" alt="logo">
+                        <div class="footer-logo-text">
+                            <span class="footer-name-company">кондор строй</span>
+                            <span class="footer-discr-company">Более 7 лет строим дома для комфортной жизни</span>
+                        </div>
+                    </div>
+                    <div class="footer-contacts">
+                        <span class="footer-email">kondor-stroy@yandex.ru</span>
+                        <span class="footer-adress">город Солнечногорск, ул.Красная 158, офис 416</span>
+                    </div>
+                </div>
+                <div class="footer_container-part-right">
+                    <ul>
+                        <li><a href="#">свидетельство о вступлении в сро</a></li>
+                        <li><a href="#">реквизиты</a></li>
+                        <li><a href="#">предложить сотрудничество</a></li>
+                        <li><a href="#">весь список работ</a></li>
+                    </ul>
+                    <p class="development">Упаковка и разработка</p>
+                </div>
+                <button class="privacy-policy">Политика конфиденциальности</button>
+                <span class="all-rights-reserv">&#169;2018-2019.Строительная компания "Кондор-Строй"</span>
+            </div>
+        </section>
+    </footer>
+    <script src="./build/js/main.min.js"></script>
+</body>
+</html>
